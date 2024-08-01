@@ -76,6 +76,8 @@ abstract class HttpService extends Service
             $request = $request->withHeader($header, $value);
         }
 
+        $request = $request->withHeader('User-Agent', 'Swap');
+
         return $request;
     }
 

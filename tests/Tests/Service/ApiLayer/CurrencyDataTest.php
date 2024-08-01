@@ -83,7 +83,7 @@ class CurrencyDataTest extends ServiceTestCase
     public function it_fetches_a_historical_rate()
     {
         $pair = CurrencyPair::createFromString('USD/AED');
-        $uri = 'http://apilayer.net/api/historical?apikey=secret&date=2015-05-06';
+        $uri = 'https://api.apilayer.com/currency_data/historical?apikey=secret&date=2015-05-06';
         $content = file_get_contents(__DIR__.'/../../../Fixtures/Service/ApiLayer/CurrencyData/historical_success.json');
         $date = new \DateTime('2015-05-06');
         $expectedDate = new \DateTime();

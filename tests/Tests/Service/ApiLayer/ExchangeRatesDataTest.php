@@ -185,7 +185,7 @@ class ExchangeRatesDataTest extends ServiceTestCase
     public function it_fetches_a_rate()
     {
         $pair = CurrencyPair::createFromString('EUR/USD');
-        $uri = 'https://api.apilayer.com/exchangerates_data/latest?base=EUR&api_key=x&symbols=USD';
+        $uri = 'https://api.apilayer.com/exchangerates_data/latest?base=EUR&apikey=x&symbols=USD';
         $content = file_get_contents(__DIR__.'/../../../Fixtures/Service/ApiLayer/ExchangeRatesData/latest.json');
 
         $service = new ExchangeRatesData(
